@@ -6,7 +6,7 @@ import org.junit.Test;
 import pageobject.MainPage;
 
 
-public class ConstructorSectionTests extends Driver {
+public class ConstructorSectionTests extends BaseTest {
 
     MainPage mainPage;
 

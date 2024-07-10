@@ -10,7 +10,7 @@ import pens.UserAPI;
 import serialization.User;
 
 
-public class RegistrationTests extends Driver {
+public class RegistrationTests extends BaseTest {
 
 
     String name;

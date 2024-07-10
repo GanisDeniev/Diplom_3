@@ -10,7 +10,7 @@ import pageobject.RegistrationPage;
 import pens.UserAPI;
 import serialization.User;
 
-public class PersonalAccountPageTests extends Driver {
+public class PersonalAccountPageTests extends BaseTest {
 
     MainPage mainPage;
     LoginPage loginPage;
@@ -46,6 +46,7 @@ public class PersonalAccountPageTests extends Driver {
         loginPage.clickLoginButton();
         mainPage.waitForLoad();
     }
+
     @Test
     @DisplayName("Переход по клику на 'Личный кабинет'")
     public void clickToGoToMyAccount() {
@@ -94,9 +95,10 @@ public class PersonalAccountPageTests extends Driver {
         loginPage.waitForLoad();
         Assert.assertTrue("Выход не произошел", loginPage.isEnterLabelVisible());
     }
+
     @After
     public void tearDown() {
-        String accessToken = UserAPI.loginUser(new User(email,password)).then().extract().path("accessToken");
+        String accessToken = UserAPI.loginUser(new User(email, password)).then().extract().path("accessToken");
         if (accessToken != null) {
             UserAPI.deleteUser(accessToken);
         }

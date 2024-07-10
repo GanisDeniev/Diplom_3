@@ -10,7 +10,7 @@ import pageobject.RegistrationPage;
 import pens.UserAPI;
 import serialization.User;
 
-public class LoginTests extends Driver {
+public class LoginTests extends BaseTest {
 
      MainPage mainPage;
      LoginPage loginPage;
